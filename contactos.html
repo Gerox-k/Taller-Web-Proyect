@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Cevichería - Los Choritos</title>
     <link rel="stylesheet" href="style.css">
   </head>
@@ -25,56 +26,43 @@
     </header>
 
     <main>
-      <h1>Bienvenidos a la cevicheria "Los Choritos"</h1>
+      <h2>Contacto</h2>
 
-      <p>
-        Los Choritos es un restaurante cevichería familiar dedicado a ofrecer
-        platos marinos preparados con sabor y dedicación.
-      </p>
+      <p>Puedes comunicarte con nosotros mediante los siguientes datos:</p>
+
+      <table>
+        <tr>
+          <th>Dato</th>
+          <th>Información</th>
+        </tr>
+
+        <tr>
+          <td>Encargado</td>
+          <td>Carlos Pérez</td>
+        </tr>
+
+        <tr>
+          <td>Teléfono</td>
+          <td>+51 924 911 299</td>
+        </tr>
+
+        <tr>
+          <td>Correo</td>
+          <td>loschoritos@gmail.com</td>
+        </tr>
+      </table>
+
+      <h2>Envíanos un mensaje</h2>
 
       <form>
-        <fieldset>
-          <legend>Registrate con nosotros</legend>
-          <br />
-          <label for="nombre"> Nombre de usuario: </label>
-          <br />
-          <input type="text" id="nombre" name="nombre" required />
-          <br />
-          <label for="correo"> Crear Contraseña: </label>
-          <br />
-          <input type="password" id="Contraseña" name="Contraseña" required />
-          <br />
-          <br />
-          <center>
-            <input type="submit" value="Registrar" />
-          </center>
-        </fieldset>
+        <label for="nombre"> Nombre: </label>
+        <input type="text" id="nombre" name="nombre" />
+        <label for="correo"> Correo electrónico: </label>
+        <input type="email" id="correo" name="correo" />
+        <label for="mensaje"> Mensaje: </label>
+        <textarea id="mensaje" name="mensaje" rows="5"></textarea>
+        <input type="submit" value="Enviar" />
       </form>
-
-      <img
-        class="imagen-principal"
-        src="imagenes/los-choritos.jpg"
-        alt="Imagen del restaurante cevichería Los Choritos"
-      />
-
-      <h2>Nuestros platos</h2>
-
-      <p>Entre algunos de nuestros platos se encuentran:</p>
-
-      <ul>
-        <li>Ceviche</li>
-        <li>Choritos a la chalaca</li>
-        <li>Jalea mixta</li>
-        <li>Arroz con mariscos</li>
-        <li>Platos marinos variados</li>
-      </ul>
-
-      <h2>Nuestra cevichería</h2>
-
-      <p>
-        En Los Choritos buscamos brindar una atención agradable y compartir el
-        sabor de la comida marina peruana con nuestros clientes.
-      </p>
     </main>
 
     <footer class="footer">

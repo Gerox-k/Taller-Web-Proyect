@@ -7,12 +7,18 @@
     <link rel="stylesheet" href="style.css">
   </head>
 
-  <body>
+  <body class="pagina-inicio">
     <header>
-      <img
-        src="imagenes/logo_cevicheria.png"
-        alt="Logo de la cevichería Los Choritos"
-      />
+      <div class="header-top">
+        <img
+          src="imagenes/img/logo_cevicheria.png"
+          alt="Logo de la cevichería Los Choritos"
+        />
+
+        <button class="btn-registro" id="abrirRegistro" type="button">
+          Iniciar sesión
+        </button>
+      </div>
 
       <nav>
         <a href="index.html">Inicio</a>
@@ -25,41 +31,22 @@
     </header>
 
     <main>
-      <h1>Bienvenidos a la cevicheria "Los Choritos"</h1>
+      <h1>Bienvenidos a la cevichería «Los Choritos»</h1>
 
       <p>
         Los Choritos es un restaurante cevichería familiar dedicado a ofrecer
-        platos marinos preparados con sabor y dedicación.
+        platos marinos preparados con frescura, sabor y dedicación.
       </p>
-
-      <form>
-        <fieldset>
-          <legend>Registrate con nosotros</legend>
-          <br />
-          <label for="nombre"> Nombre de usuario: </label>
-          <br />
-          <input type="text" id="nombre" name="nombre" required />
-          <br />
-          <label for="correo"> Crear Contraseña: </label>
-          <br />
-          <input type="password" id="Contraseña" name="Contraseña" required />
-          <br />
-          <br />
-          <center>
-            <input type="submit" value="Registrar" />
-          </center>
-        </fieldset>
-      </form>
 
       <img
         class="imagen-principal"
-        src="imagenes/los-choritos.jpg"
+        src="imagenes/img/los-choritos.jpg"
         alt="Imagen del restaurante cevichería Los Choritos"
       />
 
       <h2>Nuestros platos</h2>
 
-      <p>Entre algunos de nuestros platos se encuentran:</p>
+      <p>Conoce algunas de nuestras especialidades:</p>
 
       <ul>
         <li>Ceviche</li>
@@ -76,6 +63,40 @@
         sabor de la comida marina peruana con nuestros clientes.
       </p>
     </main>
+
+    <div class="modal" id="modalRegistro" aria-hidden="true">
+      <div class="modal-contenido" role="dialog" aria-modal="true" aria-labelledby="tituloRegistro">
+        <button class="modal-cerrar" id="cerrarRegistro" type="button" aria-label="Cerrar ventana">×</button>
+
+        <form class="form-registro-modal" id="formModal">
+          <h2 id="tituloRegistro">Iniciar sesión</h2>
+
+          <div id="camposLogin">
+            <label for="nombreModal">Nombre de usuario:</label>
+            <input type="text" id="nombreModal" name="nombre" required />
+
+            <label for="passwordModal">Contraseña:</label>
+            <input type="password" id="passwordModal" name="password" required />
+
+            <p class="texto-registro">¿No tienes cuenta? <a href="#" id="mostrarRegistro">Regístrate</a></p>
+
+            <input type="submit" value="Ingresar" />
+          </div>
+
+          <div id="camposRegistro" style="display:none;">
+            <label for="nombreRegistro">Nombre de usuario:</label>
+            <input type="text" id="nombreRegistro" name="nombreRegistro" required />
+
+            <label for="passwordRegistro">Crear Contraseña:</label>
+            <input type="password" id="passwordRegistro" name="passwordRegistro" required />
+
+            <p class="texto-registro">¿Ya tienes cuenta? <a href="#" id="mostrarLogin">Inicia sesión</a></p>
+
+            <input type="submit" value="Registrar" />
+          </div>
+        </form>
+      </div>
+    </div>
 
     <footer class="footer">
       <div class="footercontenido">
@@ -104,5 +125,77 @@
         <p>&copy; 2026 Los Choritos Cevichería - Lima, Perú</p>
       </div>
     </footer>
+
+    <script>
+      const modal = document.getElementById('modalRegistro');
+      const abrirRegistro = document.getElementById('abrirRegistro');
+      const cerrarRegistro = document.getElementById('cerrarRegistro');
+      const tituloRegistro = document.getElementById('tituloRegistro');
+      const camposLogin = document.getElementById('camposLogin');
+      const camposRegistro = document.getElementById('camposRegistro');
+      const mostrarRegistro = document.getElementById('mostrarRegistro');
+      const mostrarLogin = document.getElementById('mostrarLogin');
+      const usuarioPrueba = 'Juan';
+      const passwordPrueba = 'juan123';
+
+      function mostrarPantalla(tipo) {
+        const esRegistro = tipo === 'registro';
+
+        tituloRegistro.textContent = esRegistro ? 'Registrarse' : 'Iniciar sesión';
+        camposLogin.style.display = esRegistro ? 'none' : 'block';
+        camposRegistro.style.display = esRegistro ? 'block' : 'none';
+      }
+
+      abrirRegistro.addEventListener('click', () => {
+        modal.classList.add('visible');
+        modal.setAttribute('aria-hidden', 'false');
+        mostrarPantalla('login');
+      });
+
+      cerrarRegistro.addEventListener('click', () => {
+        modal.classList.remove('visible');
+        modal.setAttribute('aria-hidden', 'true');
+      });
+
+      mostrarRegistro.addEventListener('click', (event) => {
+        event.preventDefault();
+        mostrarPantalla('registro');
+      });
+
+      mostrarLogin.addEventListener('click', (event) => {
+        event.preventDefault();
+        mostrarPantalla('login');
+      });
+
+      document.getElementById('formModal').addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const estaEnRegistro = camposRegistro.style.display !== 'none';
+
+        if (estaEnRegistro) {
+          alert('Usuario registrado correctamente. Ahora puedes iniciar sesión.');
+          mostrarPantalla('login');
+          return;
+        }
+
+        const usuarioIngresado = document.getElementById('nombreModal').value.trim();
+        const passwordIngresado = document.getElementById('passwordModal').value;
+
+        if (usuarioIngresado === usuarioPrueba && passwordIngresado === passwordPrueba) {
+          alert('Inicio de sesión exitoso. Bienvenido Juan');
+          modal.classList.remove('visible');
+          modal.setAttribute('aria-hidden', 'true');
+        } else {
+          alert('Usuario o contraseña incorrectos. Intenta con:\nUsuario: Juan\nContraseña: juan123');
+        }
+      });
+
+      modal.addEventListener('click', (event) => {
+        if (event.target === modal) {
+          modal.classList.remove('visible');
+          modal.setAttribute('aria-hidden', 'true');
+        }
+      });
+    </script>
   </body>
 </html>

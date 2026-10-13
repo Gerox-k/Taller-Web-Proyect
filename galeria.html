@@ -3,96 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Cevichería - Los Choritos</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Galería - Los Choritos Cevichería</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+        header {
+            background-color: #003d7a;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #002855;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .item-galeria {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            cursor: pointer;
+        }
+        .item-galeria img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .item-galeria p {
+            padding: 15px;
+            font-size: 14px;
+            color: #333;
+        }
+        footer {
+            background-color: #003d7a;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
 </head>
-
 <body>
-
     <header>
-        <img
-            src="imagenes/logo_cevicheria.png"
-            alt="Logo de la cevichería Los Choritos"
-        >
-
-        <nav>
-            <a href="index.html">Inicio</a>
-            <a href="nosotros.html">Nosotros</a>
-            <a href="servicios.html">Servicios</a>
-            <a href="galeria.html">Galería</a>
-            <a href="porque-elegirnos.html">¿Por qué elegirnos?</a>
-            <a href="contactos.html">Contacto</a>
-        </nav>
+        <h1>Los Choritos Cevicheria</h1>
     </header>
 
+
+
     <div class="container">
-
         <h2>Galería de Platos</h2>
-
-        <br>
-
         <div class="galeria">
-
             <div class="item-galeria">
-                <img
-                    src="https://cdn.pixabay.com/photo/2021/07/17/01/06/ceviche-6472044_1280.jpg"
-                    alt="Ceviche clásico"
-                >
-
-                <p>Ceviche clásico</p>
+                <img src="ceviche de conchas negras.png" alt="Ceviche de conchas negras">
+                <p>Ceviche de conchas negras</p>
             </div>
-
             <div class="item-galeria">
-                <img
-                    src="https://i.ytimg.com/vi/9WPCPA_TNek/maxresdefault.jpg"
-                    alt="Arroz con mariscos"
-                >
-
-                <p>Arroz con mariscos</p>
-            </div>
-
-            <div class="item-galeria">
-                <img
-                    src="https://media.istockphoto.com/id/1318069987/es/foto/ceviche-de-pescado-y-chicharr%C3%B3n-de-pescado-con-yuca-frita-ma%C3%ADz-dulce-y-batata-servido-en-un.jpg?s=612x612&w=0&k=20&c=Y1Xlg7jxma6xyx3D2pWkA3Y-MGYoIKkZerXrUNMOEgA="
-                    alt="Ceviche mixto"
-                >
-
+                <img src="ceviche mixto.jpeg" alt="Ceviche mixto">
                 <p>Ceviche mixto</p>
             </div>
-
             <div class="item-galeria">
-                <img
-                    src="https://i.ytimg.com/vi/TaTLMSrT8ao/maxresdefault.jpg"
-                    alt="Chicharrón de pescado"
-                >
-
-                <p>Chicharrón de pescado</p>
+                <img src="chaufa de langostinos.jpeg" alt="Chaufa de langostinos">
+                <p>Chaufa de langostinos</p>
             </div>
-
             <div class="item-galeria">
-                <img
-                    src="https://www.ajinomoto.com.pe:8085/img/receta/456.%20jalea%20de%20mariscos.jpg"
-                    alt="Jalea marina"
-                >
-
-                <p>Jalea marina</p>
+                <img src="chicharron de langostinos.jpeg" alt="Chicharron de langostinos">
+                <p>Chicharron de langostinos</p>
             </div>
-
             <div class="item-galeria">
-                <img
-                    src="imagenes/los-choritos.jpg"
-                    alt="Platos marinos variados"
-                >
-
-                <p>Platos marinos variados</p>
+                <img src="enrrollado de pescado en salsa de langostino.jpeg" alt="Enrrollado de pescado en salsa de langostinos">
+                <p>Enrrollado de pescado en salsa de langostinos</p>
             </div>
-
+             <div class="item-galeria">
+                <img src="ceviche clasico.jpg" alt="Ceviche clásico">
+                <p>Ceviche clásico</p>
+            </div>
+        
         </div>
-
     </div>
-
-    <footer class="footer">
+     <footer class="footer">
         <div class="footercontenido">
             <div class="footercolumna">
                 <h3>Los Choritos</h3>

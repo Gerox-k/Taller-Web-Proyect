@@ -316,61 +316,7 @@ input[type="submit"] {
   line-height: 1.6;
 }
 
-/* ==========================================================================
-   5. PIE DE PÁGINA (Footer)
-   ========================================================================== */
-footer {
-  background-color: #004f55;
-  color: white;
-  text-align: center;
-  padding: 15px;
-}
 
-.footer {
-  background-color: #1d3995;
-  color: white;
-  padding-top: 40px;
-  text-align: center;
-}
-
-.footercontenido {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 40px;
-  padding: 0 10% 35px;
-}
-
-.footercolumna {
-  max-width: 360px;
-}
-
-.footercolumna p {
-  line-height: 1.6;
-}
-
-.footercolumna h3 {
-  color: #20a8d1;
-  font-size: 20px;
-}
-
-.footerfin {
-  text-align: center;
-  background-color: #152b73;
-  padding: 15px;
-}
-
-.footerfin p {
-  margin: 0;
-}
-
-.sitio-footer {
-  text-align: center;
-  padding: 15px;
-  margin-top: 30px;
-  font-size: 12px;
-  color: #777;
-}
 
 /* ===== MEJORAS: INICIO Y CONTACTOS ===== */
 
@@ -536,7 +482,6 @@ footer {
   }
 }
 
-
 /* ==========================================
     PAGINA NOSOTROS
    ========================================== */
@@ -601,7 +546,6 @@ footer {
   height: auto;
 }
 
-/* Frase final */
 .pagina-nosotros .frase {
   text-align: center;
   font-size: 22px;
@@ -610,7 +554,6 @@ footer {
   margin: 35px 0;
 }
 
-/* Adaptacion para celulares */
 @media (max-width: 600px) {
   .pagina-nosotros main {
     width: 100%;
@@ -623,3 +566,5 @@ footer {
     height: auto;
   }
 }
+
+

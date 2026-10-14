@@ -366,6 +366,8 @@ input[type="submit"] {
   margin-bottom: 20px;
 }
 
+
+
 /* Página Contactos */
 .pagina-contactos table {
   max-width: 760px;
@@ -566,5 +568,58 @@ input[type="submit"] {
     height: auto;
   }
 }
+
+.desde-izquierda {
+  animation: entrarIzquierda 1.5s ease-out;
+}
+
+.desde-derecha {
+  animation: entrarDerecha 1.5s ease-out;
+}
+
+@keyframes entrarIzquierda {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes entrarDerecha {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.aparece-borroso {
+  animation: enfocar 3s ease-out;
+}
+
+@keyframes enfocar {
+  0% {
+    filter: blur(20px);  
+    opacity: 0;
+  }
+  50% {
+    filter: blur(8px);   
+    opacity: 0.6;
+  }
+  100% {
+    filter: blur(0);    
+    opacity: 1;
+  }
+}
+
+
+
+
 
 

@@ -25,47 +25,68 @@
         <a href="contactos.html">Contacto</a>
       </nav>
     </header>
+<main>
+  <div class="contacto-contenedor">
 
-    <main>
+    <section class="contacto-datos">
       <h1>Contacto</h1>
+      <p class="contacto-intro">¿Tienes alguna consulta? Comunícate con nosotros a través de estos datos:</p>
 
-      <p>¿Tienes alguna consulta? Comunícate con nosotros a través de estos datos:</p>
+      <div class="dato">
+        <div class="dato-icono">👤</div>
+        <div>
+          <span class="dato-etiqueta">Encargado</span>
+          <span class="dato-valor">Carlos Pérez</span>
+        </div>
+      </div>
 
-      <table>
-        <tr>
-          <th>Dato</th>
-          <th>Información</th>
-        </tr>
+      <div class="dato">
+        <div class="dato-icono">📞</div>
+        <div>
+          <span class="dato-etiqueta">Teléfono</span>
+          <span class="dato-valor">+51 924 911 299</span>
+        </div>
+      </div>
 
-        <tr>
-          <td>Encargado</td>
-          <td>Carlos Pérez</td>
-        </tr>
+      <div class="dato">
+        <div class="dato-icono">📧</div>
+        <div>
+          <span class="dato-etiqueta">Correo</span>
+          <span class="dato-valor">loschoritos@gmail.com</span>
+        </div>
+      </div>
 
-        <tr>
-          <td>Teléfono</td>
-          <td>+51 924 911 299</td>
-        </tr>
+      <div class="dato">
+        <div class="dato-icono">🕒</div>
+        <div>
+          <span class="dato-etiqueta">Horario</span>
+          <span class="dato-valor">Lunes a Domingo, 11:00 a.m. - 7:00 p.m.</span>
+        </div>
+      </div>
+    </section>
 
-        <tr>
-          <td>Correo</td>
-          <td>loschoritos@gmail.com</td>
-        </tr>
-      </table>
-
+    <section class="contacto-panel">
       <h2>Envíanos un mensaje</h2>
 
       <form class="contacto-formulario" id="formulario-contacto">
-        <label for="nombre"> Nombre: </label>
+        <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" minlength="2" required />
-        <label for="correo"> Correo electrónico: </label>
+
+        <label for="correo">Correo electrónico:</label>
         <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required />
-        <label for="mensaje"> Mensaje: </label>
+
+        <label for="mensaje">Mensaje:</label>
         <textarea id="mensaje" name="mensaje" rows="5" minlength="10" placeholder="Escribe tu consulta o sugerencia" required></textarea>
+
         <input type="submit" value="Enviar mensaje" />
       </form>
+
+      <div class="mensaje-exito" id="mensaje-exito"></div>
       <p class="contacto-aviso">Este formulario es una demostración académica; todavía no envía mensajes reales.</p>
-    </main>
+    </section>
+
+  </div>
+</main>
 
    <footer class="footer">
       <div class="footer-contenido">
@@ -97,10 +118,17 @@
       </div>
     </footer>
     <script>
-      document.getElementById('formulario-contacto').addEventListener('submit', function (evento) {
-        evento.preventDefault();
-        alert('Formulario validado. Esta es una demostración y no se ha enviado ningún mensaje.');
-      });
+  document.getElementById('formulario-contacto').addEventListener('submit', function (evento) {
+    evento.preventDefault();
+
+    const nombre = document.getElementById('nombre').value;
+    const mensajeExito = document.getElementById('mensaje-exito');
+
+    mensajeExito.textContent = '¡Formulario validado! Gracias ' + nombre + '. Esta es una demostración y no se ha enviado ningún mensaje.';
+    mensajeExito.style.display = 'block';
+
+    this.reset();
+  });
     </script>
   </body>
 </html>

@@ -248,6 +248,12 @@ fOOOTER
   color:rgb(0, 0, 0);
   padding: 35px 6% 25px;
 }
+
+.pagina-inicio .footer {
+  border-top: 3px solid #d4a84b;
+  background: linear-gradient(135deg, var(--azul-marino), #06445d);
+  color: #f8fbfc;
+}
 .footer-contenido{
   display: grid;
   grid-template-columns: 1.3fr 1fr 1fr;
@@ -307,6 +313,16 @@ fOOOTER
 .boton-reclamos:hover {
   background-color: #d85667;
   color: #fbe06a;
+}
+
+.pagina-inicio .boton-reclamos {
+  border-color: #e6bd67;
+  color: #f8fbfc;
+}
+
+.pagina-inicio .boton-reclamos:hover {
+  background-color: #e6bd67;
+  color: #073e57;
 }
 
 @media (max-width: 900px) {

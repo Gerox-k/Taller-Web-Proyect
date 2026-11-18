@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Cevichería - Los Choritos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Por-queyFooter.css">
+  </head>
+
+  <body class="pagina-contactos">
+    <header>
+      <img
+        src="imagenes/img/logo_cevicheria.png"
+        alt="Logo de la cevichería Los Choritos"
+      />
+
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="galeria.html">Galería</a>
+        <a href="porque-elegirnos.html">¿Por qué elegirnos?</a>
+        <a href="contactos.html">Contacto</a>
+      </nav>
+    </header>
+<main>
+  <div class="contacto-contenedor">
+
+    <section class="contacto-datos">
+      <h1>Contacto</h1>
+      <p class="contacto-intro">¿Tienes alguna consulta? Comunícate con nosotros a través de estos datos:</p>
+
+      <div class="dato">
+        <div class="dato-icono">👤</div>
+        <div>
+          <span class="dato-etiqueta">Encargado</span>
+          <span class="dato-valor">Carlos Pérez</span>
+        </div>
+      </div>
+
+      <div class="dato">
+        <div class="dato-icono">📞</div>
+        <div>
+          <span class="dato-etiqueta">Teléfono</span>
+          <span class="dato-valor">+51 924 911 299</span>
+        </div>
+      </div>
+
+      <div class="dato">
+        <div class="dato-icono">📧</div>
+        <div>
+          <span class="dato-etiqueta">Correo</span>
+          <span class="dato-valor">loschoritos@gmail.com</span>
+        </div>
+      </div>
+
+      <div class="dato">
+        <div class="dato-icono">🕒</div>
+        <div>
+          <span class="dato-etiqueta">Horario</span>
+          <span class="dato-valor">Lunes a Domingo, 11:00 a.m. - 7:00 p.m.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="contacto-panel">
+      <h2>Envíanos un mensaje</h2>
+
+      <form class="contacto-formulario" id="formulario-contacto">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" minlength="2" required />
+
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required />
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="5" minlength="10" placeholder="Escribe tu consulta o sugerencia" required></textarea>
+
+        <input type="submit" value="Enviar mensaje" />
+      </form>
+
+      <div class="mensaje-exito" id="mensaje-exito"></div>
+      <p class="contacto-aviso">Este formulario es una demostración académica; todavía no envía mensajes reales.</p>
+    </section>
+
+  </div>
+</main>
+
+   <footer class="footer">
+      <div class="footer-contenido">
+        <div class="footer-columna footer-marca">
+          <img src="imagenes/img/logo_cevicheria.png" alt="Logro de la cevicheria Los Choritos">
+          <h3><b>Los Choritos</b></h3>
+          <p>
+            Siente con nosotros la verdadera pasión del mar peruano. Pesca
+            fresca, tradición y el sazón perfecto directo a tu paladar. 🐟
+          </p>
+        </div>
+
+        <div class="footer-columna">
+          <h3><b>CONTÁCTANOS</b></h3>
+          <p>📞 <a href="tel:+51953586776">+51 953 586 776</a></p>
+          <p>📧 <a href="mailto:loschoritos@gmail.com">loschoritos@gmail.com</a></p>
+        </div>
+
+        <div class="footer-columna">
+          <h3><b>Horario de atención</b></h3>  
+          <p>Lunes a Domingo</p>
+          <p>11:00 a.m. - 7:00 p.m.</p>
+        </div>
+      </div>
+
+      <div class="footer-fin">
+        <p>&copy; 2026 Los Choritos Cevichería - Lima, Perú</p>
+        <a class="boton-reclamos" href="#">📖 Libro de reclamaciones</a>
+      </div>
+    </footer>
+    <script>
+  document.getElementById('formulario-contacto').addEventListener('submit', function (evento) {
+    evento.preventDefault();
+
+    const nombre = document.getElementById('nombre').value;
+    const mensajeExito = document.getElementById('mensaje-exito');
+
+    mensajeExito.textContent = '¡Formulario validado! Gracias ' + nombre + '. Esta es una demostración y no se ha enviado ningún mensaje.';
+    mensajeExito.style.display = 'block';
+
+    this.reset();
+  });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cevichería - Los Choritos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Por-queyFooter.css">
+  </head>
+
+  <body class="pagina-inicio">
+    <div id="loader" role="status" aria-live="polite">
+      <img class="logo-carga" src="imagenes/img/logo_cevicheria.png" alt="Logo de Los Choritos">
+      <div class="spinner" aria-hidden="true"></div>
+      <div class="texto-carga">Preparando algo delicioso...</div>
+    </div>
+    <header>
+      <div class="header-top">
+        <img
+          src="imagenes/img/logo_cevicheria.png"
+          alt="Logo de la cevichería Los Choritos"
+        />
+
+        <button class="btn-registro" id="abrirRegistro" type="button">
+          Iniciar sesión
+        </button>
+      </div>
+
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="galeria.html">Galería</a>
+        <a href="porque-elegirnos.html">¿Por qué elegirnos?</a>
+        <a href="contactos.html">Contacto</a>
+      </nav>
+    </header>
+
+    <main class="inicio-main">
+      <section class="inicio-hero" aria-labelledby="titulo-inicio">
+        <div class="inicio-hero-contenido">
+          <p class="inicio-etiqueta">Cocina marina peruana</p>
+          <h1 id="titulo-inicio">El sabor del mar que siempre provoca</h1>
+          <p>
+            Ceviches y platos marinos preparados con frescura, tradición y todo
+            el cariño de Los Choritos.
+          </p>
+          <div class="inicio-acciones">
+            <a class="inicio-boton inicio-boton-principal" href="galeria.html">Descubre nuestros platos</a>
+            <a class="inicio-boton inicio-boton-secundario" href="contactos.html">Ven a visitarnos</a>
+          </div>
+          <p class="inicio-sello">Frescura · Sabor · Tradición</p>
+        </div>
+        <div class="inicio-hero-galeria" role="img" aria-label="Selección de platos marinos de Los Choritos">
+          <img class="inicio-hero-foto" src="imagenes/img/ceviche clasico.jpg" alt="" aria-hidden="true">
+          <img class="inicio-hero-foto" src="imagenes/img/chicharron de langostinos.jpg" alt="" aria-hidden="true">
+          <img class="inicio-hero-foto" src="imagenes/img/chaufa de langostinos.jpg" alt="" aria-hidden="true">
+          <div class="inicio-hero-indicadores">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="inicio-especialidades" aria-labelledby="titulo-especialidades">
+        <p class="inicio-etiqueta">Hecho para disfrutar</p>
+        <h2 id="titulo-especialidades">Una mesa llena de sabor</h2>
+        <p class="inicio-introduccion">
+          Reúne a los tuyos y disfruta tus favoritos de la cocina marina.
+        </p>
+        <div class="inicio-platos">
+          <article class="inicio-plato">
+            <img src="imagenes/img/ceviche clasico.jpg" alt="Ceviche clásico con cebolla y camote">
+            <h3>Ceviche clásico</h3>
+          </article>
+          <article class="inicio-plato">
+            <img src="imagenes/img/chicharron de langostinos.jpg" alt="Chicharrón de langostinos dorado">
+            <h3>Chicharrón de langostinos</h3>
+          </article>
+          <article class="inicio-plato">
+            <img src="imagenes/img/chaufa de langostinos.jpg" alt="Chaufa de langostinos">
+            <h3>Chaufa de langostinos</h3>
+          </article>
+        </div>
+        <a class="inicio-enlace" href="galeria.html">Explora la galería <span aria-hidden="true">→</span></a>
+      </section>
+
+      <section class="inicio-invitacion" aria-labelledby="titulo-invitacion">
+        <div>
+          <p class="inicio-etiqueta">Tu próximo antojo está aquí</p>
+          <h2 id="titulo-invitacion">¡Te esperamos en Los Choritos!</h2>
+          <p>Escríbenos y estaremos encantados de atenderte.</p>
+        </div>
+        <a class="inicio-boton inicio-boton-principal" href="contactos.html">Contáctanos</a>
+      </section>
+    </main>
+
+    <div class="modal" id="modalRegistro" aria-hidden="true">
+      <div class="modal-contenido" role="dialog" aria-modal="true" aria-labelledby="tituloRegistro">
+        <button class="modal-cerrar" id="cerrarRegistro" type="button" aria-label="Cerrar ventana">×</button>
+
+        <form class="form-registro-modal" id="formModal">
+          <h2 id="tituloRegistro">Iniciar sesión</h2>
+
+          <div id="camposLogin">
+            <label for="nombreModal">Nombre de usuario:</label>
+            <input type="text" id="nombreModal" name="nombre" required />
+
+            <label for="passwordModal">Contraseña:</label>
+            <input type="password" id="passwordModal" name="password" required />
+
+            <p class="texto-registro">¿No tienes cuenta? <a href="#" id="mostrarRegistro">Regístrate</a></p>
+
+            <input type="submit" value="Ingresar" />
+          </div>
+
+          <div id="camposRegistro" style="display:none;">
+            <label for="nombreRegistro">Nombre de usuario:</label>
+            <input type="text" id="nombreRegistro" name="nombreRegistro" required />
+
+            <label for="passwordRegistro">Crear Contraseña:</label>
+            <input type="password" id="passwordRegistro" name="passwordRegistro" required />
+
+            <p class="texto-registro">¿Ya tienes cuenta? <a href="#" id="mostrarLogin">Inicia sesión</a></p>
+
+            <input type="submit" value="Registrar" />
+          </div>
+        </form>
+      </div>
+    </div>
+
+      <footer class="footer">
+      <div class="footer-contenido">
+        <div class="footer-columna footer-marca">
+          <img src="imagenes/img/logo_cevicheria.png" alt="Logro de la cevicheria Los Choritos">
+          <h3><b>Los Choritos</b></h3>
+          <p>
+            Siente con nosotros la verdadera pasión del mar peruano. Pesca
+            fresca, tradición y el sazón perfecto directo a tu paladar. 🐟
+          </p>
+        </div>
+
+        <div class="footer-columna">
+          <h3><b>CONTÁCTANOS</b></h3>
+          <p>📞 <a href="tel:+51953586776">+51 953 586 776</a></p>
+          <p>📧 <a href="mailto:loschoritos@gmail.com">loschoritos@gmail.com</a></p>
+        </div>
+
+        <div class="footer-columna">
+          <h3><b>Horario de atención</b></h3>  
+          <p>Lunes a Domingo</p>
+          <p>11:00 a.m. - 7:00 p.m.</p>
+        </div>
+      </div>
+
+      <div class="footer-fin">
+        <p>&copy; 2026 Los Choritos Cevichería - Lima, Perú</p>
+        <a class="boton-reclamos" href="#">📖 Libro de reclamaciones</a>
+      </div>
+    </footer>
+
+    <script>
+      const modal = document.getElementById('modalRegistro');
+      const abrirRegistro = document.getElementById('abrirRegistro');
+      const cerrarRegistro = document.getElementById('cerrarRegistro');
+      const tituloRegistro = document.getElementById('tituloRegistro');
+      const camposLogin = document.getElementById('camposLogin');
+      const camposRegistro = document.getElementById('camposRegistro');
+      const mostrarRegistro = document.getElementById('mostrarRegistro');
+      const mostrarLogin = document.getElementById('mostrarLogin');
+      const usuarioPrueba = 'Juan';
+      const passwordPrueba = 'juan123';
+      const cuentasRegistradas = [
+        { usuario: usuarioPrueba, password: passwordPrueba }
+      ];
+
+      function mostrarPantalla(tipo) {
+        const esRegistro = tipo === 'registro';
+
+        tituloRegistro.textContent = esRegistro ? 'Registrarse' : 'Iniciar sesión';
+        camposLogin.style.display = esRegistro ? 'none' : 'block';
+        camposRegistro.style.display = esRegistro ? 'block' : 'none';
+        camposLogin.querySelectorAll('input').forEach((input) => {
+          input.disabled = esRegistro;
+        });
+        camposRegistro.querySelectorAll('input').forEach((input) => {
+          input.disabled = !esRegistro;
+        });
+      }
+
+      abrirRegistro.addEventListener('click', () => {
+        if (abrirRegistro.disabled) return;
+        modal.classList.add('visible');
+        modal.setAttribute('aria-hidden', 'false');
+        mostrarPantalla('login');
+      });
+
+      cerrarRegistro.addEventListener('click', () => {
+        modal.classList.remove('visible');
+        modal.setAttribute('aria-hidden', 'true');
+      });
+
+      mostrarRegistro.addEventListener('click', (event) => {
+        event.preventDefault();
+        mostrarPantalla('registro');
+      });
+
+      mostrarLogin.addEventListener('click', (event) => {
+        event.preventDefault();
+        mostrarPantalla('login');
+      });
+
+      document.getElementById('formModal').addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const estaEnRegistro = camposRegistro.style.display !== 'none';
+
+        if (estaEnRegistro) {
+          const usuarioNuevo = document.getElementById('nombreRegistro').value.trim();
+          const passwordNuevo = document.getElementById('passwordRegistro').value;
+          const usuarioExistente = cuentasRegistradas.some(
+            (cuenta) => cuenta.usuario.toLowerCase() === usuarioNuevo.toLowerCase()
+          );
+
+          if (usuarioExistente) {
+            alert('Ese nombre de usuario ya está registrado. Elige otro.');
+            return;
+          }
+
+          cuentasRegistradas.push({ usuario: usuarioNuevo, password: passwordNuevo });
+          document.getElementById('formModal').reset();
+          alert('Usuario registrado correctamente. Ahora puedes iniciar sesión.');
+          mostrarPantalla('login');
+          return;
+        }
+
+        const usuarioIngresado = document.getElementById('nombreModal').value.trim();
+        const passwordIngresado = document.getElementById('passwordModal').value;
+        const cuentaEncontrada = cuentasRegistradas.find(
+          (cuenta) => cuenta.usuario.toLowerCase() === usuarioIngresado.toLowerCase()
+            && cuenta.password === passwordIngresado
+        );
+
+        if (cuentaEncontrada) {
+          abrirRegistro.textContent = cuentaEncontrada.usuario;
+          abrirRegistro.title = `Sesión iniciada como ${cuentaEncontrada.usuario}`;
+          abrirRegistro.setAttribute('aria-label', `Sesión iniciada como ${cuentaEncontrada.usuario}`);
+          abrirRegistro.classList.add('sesion-activa');
+          abrirRegistro.disabled = true;
+          alert(`Inicio de sesión exitoso. Bienvenido ${cuentaEncontrada.usuario}`);
+          modal.classList.remove('visible');
+          modal.setAttribute('aria-hidden', 'true');
+        } else {
+          alert('Usuario o contraseña incorrectos. Verifica los datos ingresados.');
+        }
+      });
+
+      modal.addEventListener('click', (event) => {
+        if (event.target === modal) {
+          modal.classList.remove('visible');
+          modal.setAttribute('aria-hidden', 'true');
+        }
+      });
+    </script>
+  </body>
+</html>
